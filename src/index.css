@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+.logo {
+  font-size: 34px;
+}
+
+body::-webkit-scrollbar {
+  width: 5px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #333;
+}
+body::-webkit-scrollbar-track {
+  background-color: black;
+}
+
+.blurCircleOrange {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -30%);
+  border-radius: 50%;
+  width: 571px;
+  height: 571px;
+  background: linear-gradient(90.01deg, #f8d665 -6.24%, #ff7a00 100%);
+  opacity: 0.25;
+  filter: blur(123px);
+  z-index: -5;
+  will-change: transform, opacity;
+}
+.blurCirclePink {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  width: 708px;
+  height: 710px;
+  background: linear-gradient(
+    140.81deg,
+    #ff5d5d 8%,
+    #c04cad 48.81%,
+    #1857d1 101.59%
+  );
+  opacity: 0.17;
+  filter: blur(106.5px);
+  z-index: -5;
+  will-change: transform, opacity;
+}
+
+.blurCircleBlue {
+  position: absolute;
+  top: 10%;
+  right: 0;
+  border-radius: 50%;
+  width: 506px;
+  height: 506px;
+  background: linear-gradient(130.43deg, #44ecf7 -1.47%, #1667e1 93.13%);
+  opacity: 0.15;
+  filter: blur(47px);
+  z-index: -5;
+  will-change: transform, opacity;
+}
+
+@media screen and (max-width: 768px) {
+  .logo {
+    font-size: 18px;
+    flex: none;
+  }
+  .blurCircleBlue,
+  .blurCirclePink,
+  .blurCircleOrange {
+    width: 100%;
+  }
+}
